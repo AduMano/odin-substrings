@@ -24,5 +24,25 @@ Quick Tips:
 
 
 ## USAGE
+  Enter **substrings(text: String, dictionary: Hash)**
+
+  - What to enter in the arguments?
+    
+    - **text** = This is where you put the string to check the occuring words thats in the dictionary
+    - **Hash** = This is where you put the hash of your dictionary, this is the basis for counting the occuring words (Globally)
 
 ## TEST RESULT
+```Ruby
+DICTIONARY = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
+
+puts substrings("below", DICTIONARY) 
+# => { "below" => 1, "low" => 1 }
+puts substrings("Howdy partner, sit down! How's it going?", DICTIONARY)
+# => { "down" => 1, "go" => 1, "going" => 1, "how" => 2, "howdy" => 1, "it" => 2, "i" => 3, "own" => 1, "part" => 1, "partner" => 1, "sit" => 1 }
+
+# Other Test
+my_dictionary = ["the", "is", "s", "e"]
+puts substrings("Odin, IS, ThE, Best!", my_dictionary)
+# => { "is" => 1, "s" => 2, "the" => 1, "e" => 2 }
+
+```
